@@ -31,16 +31,19 @@ pushing.
 ## Architecture
 
 ```
-index.js                          SDK wiring only: handlers registered before connect()
-src/devices/index.js              registry of the device blueprints + dispatch helpers
-src/devices/<type>.js             one device type per file (buildDevice, onPoll, onSetValue...)
-src/scenes.js                     scene action handlers (manifest `scene_actions`)
-src/widgets.js                    dashboard widget handlers (manifest `widgets`)
-src/config.js                     DEFAULT_CONFIG (mirrors the manifest defaults) + normalization
-src/weather.js                    example driver (Open-Meteo)
-gladys-assistant-integration.json manifest: name, config_schema, actions, image...
-docs/en.md, docs/fr.md            user documentation, re-hosted by Gladys (mandatory)
-test/                             node --test, against the SDK's fake Gladys (integration-sdk/testing)
+index.js                          SDK wiring only (src/app.js registers the handlers)
+src/app.js                        every SDK handler on the service, actions throw ActionFailure
+src/service.js                    watched stations, refresh timer, states, scene triggers, actions
+src/irishrail.js                  Irish Rail realtime API client + tiny XML record reader
+src/trains.js                     pure: departures, filters, ageing, station search
+src/devices.js                    the station device, its states
+src/scenes.js                     scene action get_next_departures
+src/widgets.js                    dashboard widget departures
+src/messages.js                   texts in en/fr/de/es, ActionFailure
+src/config.js / src/store.js      config normalization / /data/watch.json
+gladys-assistant-integration.json manifest
+docs/{en,fr,de,es}.md             user documentation, re-hosted by Gladys
+test/                             node --test, fake Gladys + recorded answers (test/fixtures/irish-rail)
 .github/scripts/release.mjs       release helpers (manifest bump, changelog), tested in test/
 ```
 
@@ -78,8 +81,8 @@ test/                             node --test, against the SDK's fake Gladys (in
   `type: "provider"`: 5.1.0). `test/manifest.test.js` ties the manifest to the
   code (defaults, action, scene and widget handlers): change both sides
   together.
-- **User-facing text** is bilingual (English and French): action messages,
-  manifest texts, and `docs/en.md` / `docs/fr.md`, kept in sync.
+- **User-facing text** is in English, French, German and Spanish: action
+  messages, manifest texts, and `docs/*.md`, kept in sync.
 - **Style.** Prettier formats, ESLint catches mistakes. Comments explain why,
   in English. Tests never touch the network.
 
@@ -259,3 +262,21 @@ long, et sur un « Sie »/« Ihr… » de politesse en allemand. Le store exige 
 - Docs `en`, `fr`, `de`, `es` avec les mêmes sections.
 - Chauffe, ouverture, sécurité : ne rien rendre pilotable « comme un thermostat » ou par un assistant
   vocal quand une erreur serait dangereuse (leçon d'OctoPrint).
+
+## Irish Rail (API et pièges, 20/11/2026)
+
+- API publique sans clé, XML, en HTTPS : `https://api.irishrail.ie/realtime/realtime.asmx/…`. `HEAD` répond
+  500 : toujours `GET`. Pas de quota publié : une requête par gare et par rafraîchissement, minimum 60 s.
+- `getStationDataByCodeXML_WithNumMins` (90 min) : un **code inconnu et une gare sans train répondent la même
+  liste vide** ; on valide donc le code contre `getAllStationsXML` à l'ajout. Une réponse sans `<ArrayOfObj`
+  (page de maintenance) est une erreur, pas un tableau vide.
+- `Locationtype` : O origine, S arrêt, D **terminus** (pas un départ, `Expdepart` = `00:00`), T point de
+  passage sans arrêt. Seuls O et S sont des départs. `00:00` veut dire « pas d'heure ».
+- `Duein` est l'attente affichée par Irish Rail (arrivée en gare), utilisée telle quelle ; les heures
+  (`Expdepart`…) sont en heure irlandaise, rendues telles quelles. `Late` peut être négatif (en avance → 0).
+- `Traincode` a une espace finale ; codes de gare de 4 ou 5 caractères, eux aussi parfois suivis d'une
+  espace. Plusieurs gares portent le même nom (Adamstown, Kishoge… : codes rapides/lents) : l'ajout par nom
+  refuse en rouge et liste les codes.
+- `Direction` vaut `Northbound`/`Southbound` sur l'axe Dundalk–Rosslare et Sligo–Dublin, sinon
+  `To <destination>` : le filtre de direction cherche dans la direction et la destination.
+- Lignes à couverture faible (Cork, Limerick, Waterford, Rosslare, Belfast…) : horaires théoriques seuls.

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfObjStationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://api.irishrail.ie/realtime/">
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E809 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Malahide</Destination>
+    <Origintime>08:42</Origintime>
+    <Destinationtime>10:04</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>5</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>08:42</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>08:42</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E912 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Howth</Destination>
+    <Origintime>08:55</Origintime>
+    <Destinationtime>10:11</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>18</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>08:55</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>08:55</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>P775 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Dublin Connolly</Destination>
+    <Origintime>09:00</Origintime>
+    <Destinationtime>09:48</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>23</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>09:00</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>09:00</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>Train</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E952 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Greystones</Origin>
+    <Destination>Howth</Destination>
+    <Origintime>08:53</Origintime>
+    <Destinationtime>10:24</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>28</Duein>
+    <Late>0</Late>
+    <Exparrival>09:04</Exparrival>
+    <Expdepart>09:05</Expdepart>
+    <Scharrival>09:04</Scharrival>
+    <Schdepart>09:05</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>S</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E913 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Howth</Destination>
+    <Origintime>09:12</Origintime>
+    <Destinationtime>10:29</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>35</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>09:12</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>09:12</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E811 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Malahide</Destination>
+    <Origintime>09:25</Origintime>
+    <Destinationtime>10:40</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>48</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>09:25</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>09:25</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>A607 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Rosslare Europort</Origin>
+    <Destination>Dublin Connolly</Destination>
+    <Origintime>07:10</Origintime>
+    <Destinationtime>10:17</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>53</Duein>
+    <Late>0</Late>
+    <Exparrival>09:29</Exparrival>
+    <Expdepart>09:30</Expdepart>
+    <Scharrival>09:29</Scharrival>
+    <Schdepart>09:30</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>Train</Traintype>
+    <Locationtype>S</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E914 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Greystones</Origin>
+    <Destination>Howth</Destination>
+    <Origintime>09:24</Origintime>
+    <Destinationtime>10:50</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>58</Duein>
+    <Late>0</Late>
+    <Exparrival>09:34</Exparrival>
+    <Expdepart>09:35</Expdepart>
+    <Scharrival>09:34</Scharrival>
+    <Schdepart>09:35</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>S</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E812 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Malahide</Destination>
+    <Origintime>09:43</Origintime>
+    <Destinationtime>11:00</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>66</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>09:43</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>09:43</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E915 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Howth</Destination>
+    <Origintime>09:55</Origintime>
+    <Destinationtime>11:10</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>78</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>09:55</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>09:55</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E813 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Bray</Origin>
+    <Destination>Malahide</Destination>
+    <Origintime>10:05</Origintime>
+    <Destinationtime>11:20</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>88</Duein>
+    <Late>0</Late>
+    <Exparrival>00:00</Exparrival>
+    <Expdepart>10:05</Expdepart>
+    <Scharrival>00:00</Scharrival>
+    <Schdepart>10:05</Schdepart>
+    <Direction>Northbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>O</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E207 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Malahide</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>07:30</Origintime>
+    <Destinationtime>08:50</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Killiney</Lastlocation>
+    <Duein>16</Duein>
+    <Late>3</Late>
+    <Exparrival>08:53</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>08:50</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>P603 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Dundalk</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>06:27</Origintime>
+    <Destinationtime>08:52</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Glenageary</Lastlocation>
+    <Duein>21</Duein>
+    <Late>6</Late>
+    <Exparrival>08:58</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>08:52</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>Train</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E208 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Howth</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>07:38</Origintime>
+    <Destinationtime>09:00</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Dun Laoghaire</Lastlocation>
+    <Duein>28</Duein>
+    <Late>5</Late>
+    <Exparrival>09:05</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>09:00</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E105 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Malahide</Origin>
+    <Destination>Greystones</Destination>
+    <Origintime>07:51</Origintime>
+    <Destinationtime>09:19</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Booterstown</Lastlocation>
+    <Duein>31</Duein>
+    <Late>1</Late>
+    <Exparrival>09:07</Exparrival>
+    <Expdepart>09:08</Expdepart>
+    <Scharrival>09:06</Scharrival>
+    <Schdepart>09:07</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>S</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>P604 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Drogheda</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>07:02</Origintime>
+    <Destinationtime>09:05</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Departed Blackrock</Lastlocation>
+    <Duein>32</Duein>
+    <Late>4</Late>
+    <Exparrival>09:09</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>09:05</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>Train</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E209 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Howth</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>08:00</Origintime>
+    <Destinationtime>09:21</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Grand Canal Dock</Lastlocation>
+    <Duein>43</Duein>
+    <Late>-1</Late>
+    <Exparrival>09:20</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>09:21</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E210 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Malahide</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>08:11</Origintime>
+    <Destinationtime>09:28</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Dublin Connolly</Lastlocation>
+    <Duein>51</Duein>
+    <Late>0</Late>
+    <Exparrival>09:28</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>09:28</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E211 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Howth</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>08:17</Origintime>
+    <Destinationtime>09:41</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Departed Harmonstown</Lastlocation>
+    <Duein>64</Duein>
+    <Late>0</Late>
+    <Exparrival>09:41</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>09:41</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>P653 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Maynooth</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>07:54</Origintime>
+    <Destinationtime>09:34</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Leixlip (Confey)</Lastlocation>
+    <Duein>66</Duein>
+    <Late>9</Late>
+    <Exparrival>09:43</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>09:34</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>Train</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E106 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Malahide</Origin>
+    <Destination>Greystones</Destination>
+    <Origintime>08:30</Origintime>
+    <Destinationtime>09:59</Destinationtime>
+    <Status>En Route</Status>
+    <Lastlocation>Arrived Clongriffin</Lastlocation>
+    <Duein>69</Duein>
+    <Late>0</Late>
+    <Exparrival>09:45</Exparrival>
+    <Expdepart>09:46</Expdepart>
+    <Scharrival>09:45</Scharrival>
+    <Schdepart>09:46</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>S</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E212 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Howth</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>08:38</Origintime>
+    <Destinationtime>10:00</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>83</Duein>
+    <Late>0</Late>
+    <Exparrival>10:00</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>10:00</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+  <objStationData>
+    <Servertime>2026-11-20T08:37:46.88</Servertime>
+    <Traincode>E213 </Traincode>
+    <Stationfullname>Bray</Stationfullname>
+    <Stationcode>BRAY</Stationcode>
+    <Querytime>08:37:46</Querytime>
+    <Traindate>20 Nov 2026</Traindate>
+    <Origin>Malahide</Origin>
+    <Destination>Bray</Destination>
+    <Origintime>08:48</Origintime>
+    <Destinationtime>10:07</Destinationtime>
+    <Status>No Information</Status>
+    <Lastlocation />
+    <Duein>90</Duein>
+    <Late>0</Late>
+    <Exparrival>10:07</Exparrival>
+    <Expdepart>00:00</Expdepart>
+    <Scharrival>10:07</Scharrival>
+    <Schdepart>00:00</Schdepart>
+    <Direction>Southbound</Direction>
+    <Traintype>DART</Traintype>
+    <Locationtype>D</Locationtype>
+  </objStationData>
+</ArrayOfObjStationData>
