@@ -47,6 +47,8 @@ const STATIONS_TTL_MS = 24 * 3600 * 1000;
 // A value that does not change is published again this often, so that Gladys
 // does not show it as stale ("no recent value" after 48 h).
 const HEARTBEAT_MS = 6 * 3600 * 1000;
+// How long the trigger memory of a train outlives its expected time.
+const MEMORY_MS = 30 * 60 * 1000;
 // Scene events sent per minute at most: the core refuses more than 300.
 const EVENTS_PER_MINUTE = 200;
 
@@ -219,7 +221,8 @@ export class IrishRailService {
 
   /** Polling fallback: Gladys does not poll these devices, but if it did. */
   async poll() {
-    if (this.now() - this.refreshedAt >= (this.config.refreshSeconds * 1000) / 2) {
+    const last = Math.max(this.refreshedAt, this.attemptedAt);
+    if (this.now() - last >= (this.config.refreshSeconds * 1000) / 2) {
       await this.refresh();
     }
   }
@@ -229,12 +232,15 @@ export class IrishRailService {
       // A read in progress may predate a device just created: one more read
       // after it, shared by every caller arriving meanwhile.
       this.queuedRepublish ||= Boolean(options.republish);
-      this.queued ??= this.inflight.then(() => {
-        const republish = this.queuedRepublish;
-        this.queued = null;
-        this.queuedRepublish = false;
-        return this.refresh({ republish });
-      });
+      // After a failed read too: a rejection is never kept for later callers.
+      this.queued ??= this.inflight
+        .catch(() => {})
+        .then(() => {
+          const republish = this.queuedRepublish;
+          this.queued = null;
+          this.queuedRepublish = false;
+          return this.refresh({ republish });
+        });
       return this.queued;
     }
     this.attemptedAt = this.now();
@@ -378,6 +384,7 @@ export class IrishRailService {
         // First seen: the countdown thresholds already passed are not news; a
         // delay is, except at the first read after a start.
         current.set(departure.key, {
+          expected: departure.expected,
           soon: new Set(SOON_MINUTES.filter((minutes) => departure.minutes <= minutes)),
           delay: new Set(firstRead ? DELAY_MINUTES.filter((minutes) => delay >= minutes) : []),
         });
@@ -406,9 +413,18 @@ export class IrishRailService {
           });
         }
       }
+      handled.expected = departure.expected;
       current.set(departure.key, handled);
     }
-    // A train gone from the board has left: forgotten.
+    // A train missing from one answer may come back on the next: its memory
+    // is kept until well after its time, so that it never fires twice. Then
+    // it has left: forgotten.
+    const now = this.now();
+    for (const [trainKey, memory] of previous) {
+      if (!current.has(trainKey) && memory.expected > now - MEMORY_MS) {
+        current.set(trainKey, memory);
+      }
+    }
     this.seen.set(key, current);
     return events;
   }
@@ -536,7 +552,10 @@ export class IrishRailService {
       code: station.code,
       name: station.name,
       type: TRAIN_TYPES.includes(type) ? type : '',
-      direction: clip(String(direction ?? '').trim(), 40),
+      // A direction without a letter nor a digit filters nothing.
+      direction: /[\p{L}\p{N}]/u.test(String(direction ?? ''))
+        ? clip(String(direction).trim(), 40)
+        : '',
     };
     const key = watchKey(watch);
     if (this.watches.some((known) => watchKey(known) === key)) {

@@ -295,3 +295,57 @@ test('a normal cycle writes nothing at the info level', async (t) => {
   await world.service.refresh();
   assert.deepEqual(logs, []);
 });
+
+test('a train missing from one answer does not fire its delay twice', async (t) => {
+  const world = await createWorld({ config: { language: 'en' } });
+  t.after(() => world.app.stop());
+  const { events } = await stageEverything(world);
+  assert.equal(events.filter((event) => event.key === TRIGGERS.DELAYED).length, 2);
+  const full = world.network.boards.PERSE;
+  world.network.boards.PERSE = full.filter((record) => record.Traincode !== 'E211');
+  world.clock.advance(1000);
+  await world.service.refresh();
+  world.network.boards.PERSE = full;
+  world.clock.advance(1000);
+  const before = world.fake.sceneEvents.length;
+  await world.service.refresh();
+  const again = world.fake.sceneEvents
+    .slice(before)
+    .filter((event) => event.key === TRIGGERS.DELAYED);
+  assert.deepEqual(again, []);
+});
+
+test('the published minutes are the "due in" of Irish Rail even when time passes during the read', async (t) => {
+  const world = await createWorld();
+  t.after(() => world.app.stop());
+  const now = world.clock.now;
+  // A clock that ticks a millisecond at each reading.
+  world.clock.now = () => {
+    world.clock.time += 1;
+    return world.clock.time;
+  };
+  world.service.now = world.clock.now;
+  await action(world, 'add_station', { station: 'PERSE' });
+  const device = await create(world, 'Dublin Pearse');
+  assert.equal(lastState(world, device, 'next'), 3);
+  assert.equal(lastState(world, device, 'following'), 4);
+  world.service.now = now;
+});
+
+test('a failed read does not leave a rejection for the next callers', async (t) => {
+  const { world } = await pearse(t);
+  const original = world.service.doRefresh.bind(world.service);
+  let calls = 0;
+  world.service.doRefresh = async (options) => {
+    calls += 1;
+    if (calls === 1) {
+      throw new Error('boom');
+    }
+    return original(options);
+  };
+  const first = world.service.refresh().catch(() => 'failed');
+  const queued = world.service.refresh();
+  assert.equal(await first, 'failed');
+  await queued;
+  assert.equal(calls, 2);
+});

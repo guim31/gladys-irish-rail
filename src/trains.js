@@ -86,13 +86,17 @@ export function applyFilters(departures, watch) {
   );
 }
 
-/** The departures of an earlier read, as of `now`: minutes counted again, the gone ones dropped. */
+/**
+ * The departures of an earlier read, as of `now`: minutes counted again (up,
+ * so that a read just made keeps the "due in" of Irish Rail), the gone ones
+ * dropped.
+ */
 export const aged = (departures, now) =>
   departures
     .filter((departure) => departure.expected >= now - 60000)
     .map((departure) => ({
       ...departure,
-      minutes: Math.max(0, Math.floor((departure.expected - now) / 60000)),
+      minutes: Math.max(0, Math.ceil((departure.expected - now) / 60000)),
     }));
 
 /** The delay to show: an early train is on time. */

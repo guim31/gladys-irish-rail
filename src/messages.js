@@ -121,7 +121,7 @@ export const TEXT = {
     sentence: ({ type, destination, station, when, delay }) =>
       `${type} pour ${destination} au départ de ${station} : ${when}${delay}`,
     in: ({ minutes }) => `dans ${minutes} min`,
-    now: 'à quai',
+    now: 'imminent',
     delay: ({ late }) => `, ${late} min de retard`,
     then: ({ type, destination, minutes }) =>
       `, puis ${type} pour ${destination} dans ${minutes} min`,
@@ -203,7 +203,7 @@ export const TEXT = {
     sentence: ({ type, destination, station, when, delay }) =>
       `${type} a ${destination} desde ${station}: ${when}${delay}`,
     in: ({ minutes }) => `en ${minutes} min`,
-    now: 'en el andén',
+    now: 'inminente',
     delay: ({ late }) => `, ${late} min de retraso`,
     then: ({ type, destination, minutes }) => `, luego ${type} a ${destination} en ${minutes} min`,
     nothingAt: ({ station }) => `Ningún tren desde ${station} en los próximos 90 minutos.`,
