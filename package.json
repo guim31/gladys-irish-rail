@@ -1,8 +1,8 @@
 {
-  "name": "gladys-integration-template-js",
+  "name": "gladys-irish-rail",
   "version": "1.0.0",
   "private": true,
-  "description": "Official starter template to build an external integration for Gladys Assistant with the JavaScript SDK.",
+  "description": "Irish Rail and DART next trains, delays included, at your stations in Ireland, in Gladys Assistant.",
   "type": "module",
   "main": "index.js",
   "scripts": {
